@@ -1,0 +1,17 @@
+C:\Users\vkotha\Desktop\New folder (2)\techonline-master\techonline-onlineshop\techonline-onlineshop\bin\techonline-onlineshop.dll
+C:\Users\vkotha\Desktop\New folder (2)\techonline-master\techonline-onlineshop\techonline-onlineshop\bin\techonline-onlineshop.pdb
+C:\Users\vkotha\Desktop\New folder (2)\techonline-master\techonline-onlineshop\techonline-onlineshop\obj\Debug\techonline-onlineshop.csprojResolveAssemblyReference.cache
+C:\Users\vkotha\Desktop\New folder (2)\techonline-master\techonline-onlineshop\techonline-onlineshop\obj\Debug\techonline-onlineshop.dll
+C:\Users\vkotha\Desktop\New folder (2)\techonline-master\techonline-onlineshop\techonline-onlineshop\obj\Debug\techonline-onlineshop.pdb
+C:\Users\vkotha\Desktop\Practice\techonline-master\techonline-onlineshop\techonline-onlineshop\bin\techonline-onlineshop.dll
+C:\Users\vkotha\Desktop\Practice\techonline-master\techonline-onlineshop\techonline-onlineshop\bin\techonline-onlineshop.pdb
+C:\Users\vkotha\Desktop\Practice\techonline-master\techonline-onlineshop\techonline-onlineshop\obj\Debug\techonline-onlineshop.csprojResolveAssemblyReference.cache
+C:\Users\vkotha\Desktop\Practice\techonline-master\techonline-onlineshop\techonline-onlineshop\obj\Debug\techonline-onlineshop.dll
+C:\Users\vkotha\Desktop\Practice\techonline-master\techonline-onlineshop\techonline-onlineshop\obj\Debug\techonline-onlineshop.pdb
+C:\Users\kothreddy\Downloads\techonline-master by vishal\techonline-onlineshop\techonline-onlineshop\bin\techonline-onlineshop.dll.config
+C:\Users\kothreddy\Downloads\techonline-master by vishal\techonline-onlineshop\techonline-onlineshop\bin\techonline-onlineshop.dll
+C:\Users\kothreddy\Downloads\techonline-master by vishal\techonline-onlineshop\techonline-onlineshop\bin\techonline-onlineshop.pdb
+C:\Users\kothreddy\Downloads\techonline-master by vishal\techonline-onlineshop\techonline-onlineshop\obj\Debug\techonline-onlineshop.csprojAssemblyReference.cache
+C:\Users\kothreddy\Downloads\techonline-master by vishal\techonline-onlineshop\techonline-onlineshop\obj\Debug\techonline-onlineshop.csproj.CoreCompileInputs.cache
+C:\Users\kothreddy\Downloads\techonline-master by vishal\techonline-onlineshop\techonline-onlineshop\obj\Debug\techonline-onlineshop.dll
+C:\Users\kothreddy\Downloads\techonline-master by vishal\techonline-onlineshop\techonline-onlineshop\obj\Debug\techonline-onlineshop.pdb

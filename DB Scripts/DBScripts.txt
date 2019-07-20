@@ -1,0 +1,151 @@
+CREATE TABLE [dbo].[Vishal_categories](
+	[id] [tinyint] IDENTITY(1,1) NOT NULL,
+	[cat_name] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_categories] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET IDENTITY_INSERT [dbo].[vishal_categories] ON 
+
+INSERT [dbo].[vishal_categories] ([id], [cat_name]) VALUES (1, N'Lenovo')
+INSERT [dbo].[vishal_categories] ([id], [cat_name]) VALUES (2, N'Asus')
+INSERT [dbo].[vishal_categories] ([id], [cat_name]) VALUES (3, N'Acer')
+INSERT [dbo].[vishal_categories] ([id], [cat_name]) VALUES (4, N'HP')
+INSERT [dbo].[vishal_categories] ([id], [cat_name]) VALUES (5, N'Dell')
+SET IDENTITY_INSERT [dbo].vishal_categories OFF
+
+Go
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Vishal_orders](
+	[order_id] [int] IDENTITY(1,1) NOT NULL,
+	[user_id] [int] NOT NULL,
+	[product_id] [int] NOT NULL,
+	[quantity] [int] NOT NULL,
+	[payment_method] [varchar](50) NOT NULL,
+	[shipping_city] [varchar](50) NOT NULL,
+	[shipping_address] [varchar](50) NOT NULL,
+	[shipping_postal] [varchar](50) NOT NULL,
+	[shipping_country] [varchar](50) NOT NULL,
+	[date] [datetime] NOT NULL
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+
+
+
+SET IDENTITY_INSERT [dbo].[vishal_orders] ON 
+
+INSERT [dbo].[vishal_orders] ([order_id], [user_id], [product_id], [quantity], [payment_method], [shipping_city], [shipping_address], [shipping_postal], [shipping_country], [date]) VALUES (1, 1, 3, 1, N'cheque', N'Kichevo', N'Ul.Ilindenska', N'6250', N'Macedonia', CAST(N'2015-11-30 00:00:00.000' AS DateTime))
+INSERT [dbo].[vishal_orders] ([order_id], [user_id], [product_id], [quantity], [payment_method], [shipping_city], [shipping_address], [shipping_postal], [shipping_country], [date]) VALUES (13, 1006, 44, 1, N'cheque', N'New York', N'PO BOX 2838, New York Underground', N'82712', N'United States', CAST(N'2016-01-25 03:19:53.570' AS DateTime))
+INSERT [dbo].[vishal_orders] ([order_id], [user_id], [product_id], [quantity], [payment_method], [shipping_city], [shipping_address], [shipping_postal], [shipping_country], [date]) VALUES (12, 2, 4, 1, N'cheque', N'Skopje', N'ul. Partizanski Odredi 7/21', N'2002', N'Macedonia', CAST(N'2016-01-24 23:41:07.773' AS DateTime))
+INSERT [dbo].[vishal_orders] ([order_id], [user_id], [product_id], [quantity], [payment_method], [shipping_city], [shipping_address], [shipping_postal], [shipping_country], [date]) VALUES (14, 1006, 5, 1, N'cheque', N'New York', N'PO BOX 2838, New York Underground', N'82712', N'United States', CAST(N'2016-01-25 03:19:53.613' AS DateTime))
+INSERT [dbo].[vishal_orders] ([order_id], [user_id], [product_id], [quantity], [payment_method], [shipping_city], [shipping_address], [shipping_postal], [shipping_country], [date]) VALUES (15, 1006, 4, 1, N'cheque', N'New York', N'PO BOX 2838, New York Underground', N'82712', N'United States', CAST(N'2016-01-25 03:19:53.613' AS DateTime))
+INSERT [dbo].[vishal_orders] ([order_id], [user_id], [product_id], [quantity], [payment_method], [shipping_city], [shipping_address], [shipping_postal], [shipping_country], [date]) VALUES (16, 1006, 4, 1, N'arrival', N'New York', N'PO BOX 2838, New York Underground', N'82712', N'United States', CAST(N'2016-01-25 03:22:41.897' AS DateTime))
+INSERT [dbo].[vishal_orders] ([order_id], [user_id], [product_id], [quantity], [payment_method], [shipping_city], [shipping_address], [shipping_postal], [shipping_country], [date]) VALUES (17, 1006, 5, 1, N'arrival', N'New York', N'PO BOX 2838, New York Underground', N'82712', N'United States', CAST(N'2016-01-25 03:22:41.993' AS DateTime))
+SET IDENTITY_INSERT [dbo].[orders] OFF
+
+Go
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Vishal_products](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[name] [varchar](50) NOT NULL,
+	[image_path] [varchar](50) NULL,
+	[description] [text] NOT NULL,
+	[ram_amount] [tinyint] NOT NULL,
+	[ram_type] [varchar](50) NOT NULL,
+	[cpu_freq] [float] NOT NULL,
+	[cpu_brand] [varchar](50) NOT NULL,
+	[hdd_amount] [int] NOT NULL,
+	[hdd_brand] [varchar](50) NOT NULL,
+	[gpu] [varchar](50) NULL,
+	[display] [smallint] NOT NULL,
+	[category] [tinyint] NOT NULL,
+	[price] [float] NOT NULL,
+	[discount] [int] NULL,
+ CONSTRAINT [PK_techproducts] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+
+
+SET IDENTITY_INSERT [dbo].[vishal_products] ON 
+
+INSERT [dbo].[vishal_products] ([id], [name], [image_path], [description], [ram_amount], [ram_type], [cpu_freq], [cpu_brand], [hdd_amount], [hdd_brand], [gpu], [display], [category], [price], [discount]) VALUES (3, N'Lenovo G780', N'g780.png', N'Business class Lenovo IdeaPad laptop for great performance and gaming', 8, N'DDR3', 2.3, N'Intel Core i3 3110', 500, N'Western Digital', N'Nvidia G635', 17, 1, 729, NULL)
+INSERT [dbo].[vishal_products] ([id], [name], [image_path], [description], [ram_amount], [ram_type], [cpu_freq], [cpu_brand], [hdd_amount], [hdd_brand], [gpu], [display], [category], [price], [discount]) VALUES (4, N'Lenovo G50-30 (80G001VNIN) Notebook', N'g5030.jpg', N'Business class Lenovo IdeaPad laptop for office usage', 4, N'DDR3', 1.8, N'Intel Celeron N2020', 1000, N'Hitachi', N'Intel HD Graphics 5000', 15, 1, 540, NULL)
+INSERT [dbo].[vishal_products] ([id], [name], [image_path], [description], [ram_amount], [ram_type], [cpu_freq], [cpu_brand], [hdd_amount], [hdd_brand], [gpu], [display], [category], [price], [discount]) VALUES (5, N'Lenovo G50-80 (80E5020VIN) Notebook', N'g5080.jpg', N'Lenovo mid range laptop for everyday use', 4, N'DDR3', 2.1, N'Intel Core i3', 750, N'Seagate', N'Intel HD Graphics 5000', 15, 1, 540, NULL)
+INSERT [dbo].[vishal_products] ([id], [name], [image_path], [description], [ram_amount], [ram_type], [cpu_freq], [cpu_brand], [hdd_amount], [hdd_brand], [gpu], [display], [category], [price], [discount]) VALUES (6, N'Asus EeeBook X205TA Notebook', N'X205TA.jpg', N'Powerful small and portable Asus laptop for travelers', 2, N'DDR3', 1.33, N'Atom Quad Core 4th Gen', 500, N'Seagate', N'Intel HD Graphics 5000', 11, 2, 340, NULL)
+INSERT [dbo].[vishal_products] ([id], [name], [image_path], [description], [ram_amount], [ram_type], [cpu_freq], [cpu_brand], [hdd_amount], [hdd_brand], [gpu], [display], [category], [price], [discount]) VALUES (11, N'Asus A55A-XX2064D', N'a55a.jpg', N'Great laptop for office usage and light gaming', 4, N'DDR3', 2.1, N'Intel Core i3 5th Gen', 1000, N'Western Digital', N'Intel HD Graphics', 15, 2, 450, NULL)
+INSERT [dbo].[vishal_products] ([id], [name], [image_path], [description], [ram_amount], [ram_type], [cpu_freq], [cpu_brand], [hdd_amount], [hdd_brand], [gpu], [display], [category], [price], [discount]) VALUES (15, N'Asus ROG G751JT-T7254D', N'rog.jpg', N'The world’s fastest single-GPU laptop on the go, and experience even more power while docked! The world’s first liquid-cooled gaming laptop is here. ', 16, N'DDR3', 3.6, N'Intel® Core™ i7-4720HQ', 1000, N'Seagate', N'NVIDIA GeForce GTX 970M with 3GB GDDR5', 17, 2, 1500, NULL)
+INSERT [dbo].[vishal_products] ([id], [name], [image_path], [description], [ram_amount], [ram_type], [cpu_freq], [cpu_brand], [hdd_amount], [hdd_brand], [gpu], [display], [category], [price], [discount]) VALUES (28, N'Asus Zenbook UX305FA', N'zenbook.jpg', N'Inspired enlightenment with equal measures of top-end innovation, truly unique art and superior-quality engineering, ZenBook reminds us of the value of simplicity the importance of energy in life.', 6, N'DDR3', 2, N'Intel Core M-5Y10C', 256, N'Samsung', N'Intel® HD Graphics 5300', 13, 2, 400, NULL)
+INSERT [dbo].[vishal_products] ([id], [name], [image_path], [description], [ram_amount], [ram_type], [cpu_freq], [cpu_brand], [hdd_amount], [hdd_brand], [gpu], [display], [category], [price], [discount]) VALUES (32, N'HP ProBook 430 G3', N'430.jpg', N'A cheap business entry level laptop in a 13-inch format and the latest ULV processor, the Intel Core i5-4200U, from HP. This slim model weighs a mere 1.6 kg and wants to be recognized as a serious mobile companion.', 4, N'DDR3', 2.3, N'Intel® Core™ i3-6100U', 500, N'Toshiba', N'Intel HD Graphics', 13, 4, 300, NULL)
+INSERT [dbo].[vishal_products] ([id], [name], [image_path], [description], [ram_amount], [ram_type], [cpu_freq], [cpu_brand], [hdd_amount], [hdd_brand], [gpu], [display], [category], [price], [discount]) VALUES (37, N'HP ProBook 440', N'440.jpg', N'Stand up to your workload with a thin,durable HP ProBook designed to take anywhere', 4, N'DDR3', 2.5, N'Intel® Core™ i5-4200M', 320, N'Seagate', N'Intel HD Graphics 4600', 14, 4, 400, NULL)
+INSERT [dbo].[vishal_products] ([id], [name], [image_path], [description], [ram_amount], [ram_type], [cpu_freq], [cpu_brand], [hdd_amount], [hdd_brand], [gpu], [display], [category], [price], [discount]) VALUES (38, N'HP ProBook 650', N'650.jpg', N'Take on tasks in the office or on the road with a durable HP ProBook 640 and HP ProBook 650. These ProBooks are thin, light and packed with productivity features to make work faster and easier. Plus, reliable security solutions keep your data out of the wrong hands.', 4, N'DDR3', 2.4, N'Intel® Core™ i3-4000M ', 500, N'Western Digital', N'Intel HD Graphics 4600', 15, 4, 500, NULL)
+INSERT [dbo].[vishal_products] ([id], [name], [image_path], [description], [ram_amount], [ram_type], [cpu_freq], [cpu_brand], [hdd_amount], [hdd_brand], [gpu], [display], [category], [price], [discount]) VALUES (40, N'Acer E5-571-53S1', N'e5-571-5552.jpg', N'With the Aspire E Series, everyday activities like web browsing, communicating and playing videos are effortless with Intel® or AMD processing. NVIDIA® or AMD graphics deliver fine visual detail.', 4, N'DDR3', 2.7, N'Intel® Core™ i5-5200U', 500, N'Hitachi', N'Intel® HD Graphics 5500', 15, 3, 350, NULL)
+INSERT [dbo].[vishal_products] ([id], [name], [image_path], [description], [ram_amount], [ram_type], [cpu_freq], [cpu_brand], [hdd_amount], [hdd_brand], [gpu], [display], [category], [price], [discount]) VALUES (42, N'Acer Aspire V5-473P-5602', N'v5-473p-5602.jpg', N'This Acer model shares the design with prior models, meaning accessories (e.g. screen protectors - recommended as it is a touchscreen, keyboard covers, etc.) from prior generation models are compatible.', 4, N'DDR3', 1.6, N'Intel Core i5-4200U', 320, N'Western Digital', N'Intel HD 4400', 15, 3, 399, NULL)
+INSERT [dbo].[vishal_products] ([id], [name], [image_path], [description], [ram_amount], [ram_type], [cpu_freq], [cpu_brand], [hdd_amount], [hdd_brand], [gpu], [display], [category], [price], [discount]) VALUES (44, N'Dell Inspiron 5558', N'5558black.jpg', N'Packed with potential. Just like you.Do every task better and stand out anywhere with a versatile 38.1cm (15) laptop that’s full of style.', 4, N'DDR3', 1.7, N' Intel Core I3-4005U', 500, N'Toshiba', N'NVIDIA GeForce 920M 2GB', 15, 5, 660, NULL)
+INSERT [dbo].[vishal_products] ([id], [name], [image_path], [description], [ram_amount], [ram_type], [cpu_freq], [cpu_brand], [hdd_amount], [hdd_brand], [gpu], [display], [category], [price], [discount]) VALUES (45, N'Dell Inspiron 7548', N'100920151502202.jpg', N'The new Inspiron 15 7000 Series features the first 4K Ultra HD display option of any Inspiron. The large 15.6 " display is perfect for photo editing, graphic design and maximum productivity for professionals on the go.', 5, N'DDR3', 2.2, N'Intel Core i5-5200U', 1000, N'Western Digital', N'AMD Radeon R7  M270 4GB', 15, 5, 700, NULL)
+INSERT [dbo].[vishal_products] ([id], [name], [image_path], [description], [ram_amount], [ram_type], [cpu_freq], [cpu_brand], [hdd_amount], [hdd_brand], [gpu], [display], [category], [price], [discount]) VALUES (51, N'Dell Inspiron 5758', N'5758dell.jpg', N'More and more wallet-friendly 17-inchers start to emerge on the market and Dell is the main company to blame. A lot of users would like to rely on a big screen workstation aimed mainly for multimedia rather than buying an expensive and power-hungry desktop computer that will take a toll on your monthly electric bill. ', 8, N'DDR3', 2.2, N' Intel Core i5-5200U', 1000, N'Western Digital', N'NVIDIA GeForce 920M 2GB', 17, 5, 780, NULL)
+SET IDENTITY_INSERT [dbo].vishal_products OFF
+
+Go
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Vishal_users](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[name] [varchar](50) NOT NULL,
+	[lastname] [varchar](max) NOT NULL,
+	[email] [varchar](50) NOT NULL,
+	[password] [varchar](max) NOT NULL,
+	[signup_date] [varchar](50) NOT NULL,
+	[type] [varchar](50) NOT NULL CONSTRAINT [DF_users_type]  DEFAULT ('regular')),
+ CONSTRAINT [Vishal_users] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+
+
+SET IDENTITY_INSERT [dbo].[users] ON 
+
+INSERT [dbo].[Vishal_users] ([id], [name], [lastname], [email], [password], [signup_date], [type]) VALUES (1, N'Darko', N'Gjorgjijoski', N'dg@darkog.com', N'123123123', N'Jan  6 2016  2:57PM', N'admin')
+INSERT [dbo].[Vishal_users] ([id], [name], [lastname], [email], [password], [signup_date], [type]) VALUES (2, N'Damjan', N'Miloshevski', N'damjan@techonline.us', N'123123', N'Jan  6 2016  3:00PM', N'admin')
+INSERT [dbo].[Vishal_users] ([id], [name], [lastname], [email], [password], [signup_date], [type]) VALUES (3, N'Andrej', N'Nankov', N'andrej@techonline.us', N'123123', N'Jan  6 2016  3:01PM', N'admin')
+INSERT [dbo].[Vishal_users] ([id], [name], [lastname], [email], [password], [signup_date], [type]) VALUES (4, N'Liljana', N'Dimovska', N'lile@techonline.us', N'123456', N'Jan  6 2016  3:02PM', N'admin')
+INSERT [dbo].[Vishal_users] ([id], [name], [lastname], [email], [password], [signup_date], [type]) VALUES (5, N'John', N'Doe', N'john.doe@gmail.com', N'zaasfsa', N'Jan  6 2016  3:03PM', N'regular')
+INSERT [dbo].[Vishal_users] ([id], [name], [lastname], [email], [password], [signup_date], [type]) VALUES (1002, N'Jane', N'Doe', N'jane@doe.com', N'123456', N'Jan 07 00:49:13', N'regular')
+INSERT [dbo].[Vishal_users] ([id], [name], [lastname], [email], [password], [signup_date], [type]) VALUES (1004, N'johnnie', N'walker', N'johnnie@walker.com', N'heyoh123', N'Jan 07 01:41:28', N'regular')
+INSERT [dbo].[Vishal_users] ([id], [name], [lastname], [email], [password], [signup_date], [type]) VALUES (1005, N'jason', N'wright', N'jason@wright.com', N'asdasd', N'Jan 25 03:05:01', N'regular')
+INSERT [dbo].[Vishal_users] ([id], [name], [lastname], [email], [password], [signup_date], [type]) VALUES (1006, N'Tony', N'Montana', N'tony@makeamericagreatagain.net', N'trum5555', N'Jan 25 03:17:37', N'regular')
+SET IDENTITY_INSERT [dbo].[users] OFF

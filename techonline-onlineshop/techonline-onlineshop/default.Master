@@ -1,0 +1,293 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="default.master.cs" Inherits="TechonlineFrontend._default" %>
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="ie8"> <![endif]-->
+<!--[if IE 9]> <html class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html> <!--<![endif]-->
+        <head runat="server">
+        <meta charset="utf-8">
+        <title>Techonline</title>
+        <link id="Link3" runat="server" rel="shortcut icon" href="~/favicon.png" type="image/x-icon"/>
+        <meta name="description" content="Online tech store">
+        <!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic%7CPT+Gudea:400,700,400italic%7CPT+Oswald:400,700,300' rel='stylesheet' id="googlefont">
+        
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/prettyPhoto.css">
+        <link rel="stylesheet" href="css/colpick.css">
+        <link rel="stylesheet" href="css/revslider.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        
+        <!-- Favicon and Apple Icons -->
+        <link rel="icon" type="image/png" href="images/icons/icon.html">
+        <link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-icon-57x57.html">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-icon-72x72.html">
+        
+        <!--- jQuery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.js"></script>
+			<script src="js/respond.min.js"></script>
+		<![endif]-->
+	    
+		<style id="custom-style">
+		
+		</style>
+    </head>
+<body>
+
+<div id="wrapper">
+    <header id="header">
+    	<div id="header-top">
+    		<div class="container">
+    			<div class="row">
+                    <div class="col-md-12">
+        				<div class="header-top-left">
+        					<ul id="top-links" class="clearfix">
+        						<li><a href="MyAccount.aspx" title="My Account"><span class="top-icon top-icon-user"></span><span class="hide-for-xs">My Account</span></a></li>
+        						<li><a href="Cart.aspx" title="My Cart"><span class="top-icon top-icon-cart"></span><span class="hide-for-xs">My Cart</span></a></li>
+        						<li><a href="Checkout.aspx" title="Checkout"><span class="top-icon top-icon-check"></span><span class="hide-for-xs">Checkout</span></a></li>
+        					</ul>
+        				</div><!-- End .header-top-left -->
+        				<div class="header-top-right">
+ 	
+    						<div id="headerLoginContainer" runat="server" class="header-text-container pull-right">
+    							<p id="headerWelcomeText" runat="server" class="header-text">Welcome to Techonline!</p>
+        						<p id="headerLoginLogoutLinks" runat="server" class="header-link"><a href="login.aspx">login</a>  |  <a href="registration.aspx">create an account</a></p>
+    						</div><!-- End .pull-right -->
+    					</div><!-- End .header-top-right -->
+    				</div><!-- End .col-md-12 -->
+    			</div><!-- End .row -->
+    		</div><!-- End .container -->
+    	</div><!-- End #header-top -->
+    		
+    	<div id="inner-header">
+    		<div class="container">
+    			<div class="row">
+					<div class="col-md-5 col-sm-5 col-xs-12 logo-container">
+						<h1 class="logo clearfix">
+							<span>Responsive eCommerce Template</span>
+							<a href="home.aspx" title="Techonline eCommerce Template"><img src="images/logo.jpg" alt="Techonline Commerce Template" width="188" height="67"></a>
+						</h1>
+					</div><!-- End .col-md-5 -->
+    				<div class="col-md-7 col-sm-7 col-xs-12 header-inner-right clearfix">
+    					<div class="header-inner-right-wrapper">
+                            <div class="dropdown-cart-menu-container pull-right">
+                                <div class="btn-group dropdown-cart">
+                                <button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown">
+                                    <span class="cart-menu-icon"></span>
+                                    <asp:Label ID="lblCartItemCount" runat="server" Text="0"></asp:Label> Item(s) 
+                                    $<asp:Label ID="lblCartPrice" CssClass="drop-price" runat="server" Text="0.00"></asp:Label>
+                                </button>
+                                    
+                                    <div class="dropdown-menu dropdown-cart-menu pull-right clearfix" role="menu">
+                                        <p class="dropdown-cart-description">Recently added item(s).</p>
+                                        <ul ID="ulCartDropdown" runat="server" class="dropdown-cart-product-list">
+                                            <li class="item clearfix">
+                                            <a href="#" title="Delete item" class="delete-item"><i class="fa fa-times"></i></a>
+                                            <a href="#" title="Edit item" class="edit-item"><i class="fa fa-pencil"></i></a>
+                                                <figure>
+                                                    <a href="product.html"><img src="images/products/thumbnails/shoe1.jpg" alt="shoe 1"></a>
+                                                </figure>
+                                                <div class="dropdown-cart-details">
+                                                    <p class="item-name">
+                                                    <a href="product.html">Cam Optia AF Webcam </a>
+                                                    </p>
+                                                    <p>
+                                                        1x
+                                                        <span class="item-price">$499</span>
+                                                    </p>
+                                                </div><!-- End .dropdown-cart-details -->
+                                            </li>
+                                            <li class="item clearfix">
+                                            <a href="#" title="Delete item" class="delete-item"><i class="fa fa-times"></i></a>
+                                            <a href="#" title="Edit item" class="edit-item"><i class="fa fa-pencil"></i></a>
+                                                <figure>
+                                                    <a href="product.html"><img src="images/products/thumbnails/shoe3.jpg" alt="shoe 3"></a>
+                                                </figure>
+                                                <div class="dropdown-cart-details">
+                                                    <p class="item-name">
+                                                        <a href="product.html">Iphone Case Cover Original</a>
+                                                    </p>
+                                                    <p>
+                                                        1x
+                                                        <span class="item-price">$499<span class="sub-price">.99</span></span>
+                                                    </p>
+                                                </div><!-- End .dropdown-cart-details -->
+                                            </li>
+                                        </ul>
+                                            
+                                        <ul class="dropdown-cart-total">
+                                           <!-- <li><span class="dropdown-cart-total-title">Shipping:</span>$<asp:Label ID="lblPriceShipping" runat="server" Text="0.00"></asp:Label></li> -->
+                                            <li><span class="dropdown-cart-total-title">Total:</span>$<asp:Label ID="lblPriceTotal" CssClass="sub-price" runat="server" Text="0.00"></asp:Label></li>
+                                        </ul><!-- .dropdown-cart-total -->
+                                        <div class="dropdown-cart-action">
+                                            <p><a href="Cart.aspx" class="btn btn-custom-2 btn-block">Cart</a></p>
+                                            <p><a href="Checkout.aspx" class="btn btn-custom btn-block">Checkout</a></p>
+                                        </div><!-- End .dropdown-cart-action -->
+                                            
+                                    </div><!-- End .dropdown-cart -->
+                                    </div><!-- End .btn-group -->
+                                </div><!-- End .dropdown-cart-menu-container -->    
+
+                        </div><!-- End .header-inner-right-wrapper -->
+    							
+    				</div><!-- End .col-md-7 -->
+    			</div><!-- End .row -->
+    		</div><!-- End .container -->
+    			
+    		<div id="main-nav-container">
+    			<div class="container">
+    				<div class="row">
+    					<div class="col-md-12 clearfix">
+    							
+    						<nav id="main-nav">
+    							<div id="responsive-nav">
+    								<div id="responsive-nav-button">
+										Menu <span id="responsive-nav-button-icon"></span>
+									</div><!-- responsive-nav-button -->
+    							</div>
+    							<ul class="menu clearfix">
+    								<li><a class="active" href="home.aspx">Home</a></li>
+    								<li><a href="About.aspx">About us</a></li>
+                                    <li><a href="Shop.aspx">Shop</a></li>					
+									<li><a href="Contact.aspx">Contact Us</a></li>
+								</ul>
+    								
+    						</nav>
+    							
+    						<div id="quick-access">
+    						<form class="form-inline quick-search-form" role="form" action="#">
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Search here">
+								</div><!-- End .form-inline -->
+								<button type="submit" id="quick-search" class="btn btn-custom"></button>
+							</form>
+    						</div><!-- End #quick-access -->
+    					</div><!-- End .col-md-12 -->
+    			</div><!-- End .row -->
+    		</div><!-- End .container -->
+    				
+    		</div><!-- End #nav -->
+    	</div><!-- End #inner-header -->
+    </header><!-- End #header -->
+
+
+    <asp:ContentPlaceHolder ID="MainContent" runat="server"> </asp:ContentPlaceHolder>
+
+
+        <footer id="footer">
+        	<div id="inner-footer">
+				<div class="container">
+					<div class="row">
+
+						<div class="col-md-4 col-sm-6 col-xs-12 widget">
+							<h3>ABOUT US</h3>
+                            <p>We are a company founded in Hyderabad , India in 2016. Our company aim to satisfy the client needs with quality tech products</p>
+						</div><!-- End .widget -->
+
+						<div class="col-md-4 col-sm-6 col-xs-12 widget">
+							<h3>MY ACCOUNT</h3>
+							<ul class="links">
+								<li><a href="MyAccount.aspx">My account</a></li>
+                                <li><a href="Cart.aspx">Cart</a></li>
+                                <li><a href="Checkout.aspx">Checkout</a></li>
+							</ul>
+						</div><!-- End .widget -->
+					
+						
+						<div class="clearfix visible-sm"></div>
+						
+						<div class="col-md-4 col-sm-12 col-xs-12 widget">
+							<h3>Contact Us</h3>
+							<p>To contact us please visit <a href="Contact.aspx">contact</a> page.</p>
+						</div><!-- End .widget -->
+					
+                    </div><!-- End .row -->
+				</div><!-- End .container -->
+        	
+        	</div><!-- End #inner-footer -->
+        	
+        	<div id="footer-bottom">
+        		<div class="container">
+        			<div class="row">
+        				<div class="col-md-7 col-sm-7 col-xs-12 footer-social-links-container">
+        					<ul class="social-links clearfix">
+        						<li><a href="#" class="social-icon icon-facebook"></a></li>
+        						<li><a href="#" class="social-icon icon-twitter"></a></li>
+        						<li><a href="#" class="social-icon icon-rss"></a></li>
+        						<li><a href="#" class="social-icon icon-delicious"></a></li>
+        						<li><a href="#" class="social-icon icon-linkedin"></a></li>
+        						<li><a href="#" class="social-icon icon-flickr"></a></li>
+        						<li><a href="#" class="social-icon icon-skype"></a></li>
+        						<li><a href="#" class="social-icon icon-email"></a></li>
+        					</ul>
+        				</div><!-- End .col-md-7 -->
+        				
+        				<div class="col-md-5 col-sm-5 col-xs-12 footer-text-container">
+        					<p>&copy; 2016 Powered by Vishal Solutions. All Rights Reserved.</p>
+        				</div><!-- End .col-md-5 -->
+        			</div><!-- End .row -->
+				</div><!-- End .container -->
+        	</div><!-- End #footer-bottom -->
+        	
+        </footer><!-- End #footer -->
+    </div><!-- End #wrapper -->
+        <a href="#" id="scroll-top" title="Scroll to Top"><i class="fa fa-angle-up"></i></a><!-- End #scroll-top -->
+	<!-- END -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/retina-1.1.0.min.js"></script>
+    <script src="js/jquery.placeholder.js"></script>
+    <script src="js/jquery.hoverIntent.min.js"></script>
+    <script src="js/twitter/jquery.tweet.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jflickrfeed.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.themepunch.plugins.min.js"></script>
+    <script src="js/jquery.themepunch.revolution.min.js"></script>
+    <script src="js/colpick.js"></script>
+    <script src="js/main.js"></script>
+	
+    <script>
+    	$(function() {
+
+    		// Slider Revolution
+            jQuery('#slider-rev').revolution({
+                delay:5000,
+                startwidth:1170,
+                startheight:600,
+                onHoverStop:"true",
+                hideThumbs:250,
+                navigationHAlign:"center",
+                navigationVAlign:"bottom",
+                navigationHOffset:0,
+                navigationVOffset:12,
+                soloArrowLeftHalign:"left",
+                soloArrowLeftValign:"center",
+                soloArrowLeftHOffset:0,
+                soloArrowLeftVOffset:0,
+                soloArrowRightHalign:"right",
+                soloArrowRightValign:"center",
+                soloArrowRightHOffset:0,
+                soloArrowRightVOffset:0,
+                touchenabled:"on",
+                stopAtSlide:-1,
+                stopAfterLoops:-1,
+                dottedOverlay:"none",
+                fullWidth:"on",
+                shadow:0
+         
+              });
+    	
+    	});
+    </script>
+    </body>
+</html>
